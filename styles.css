@@ -1,0 +1,385 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    
+}
+:root{
+    /* width: 1200px; */
+    margin: 32px auto;
+    --colrs:rgb(4, 47, 75);
+    --cardbg: rgba(17, 109, 110, 0.9);
+    --cardbg:rgb(150, 206, 180);
+    --cardshdw: rgb(8, 2, 2);
+    --cardhvr:rgb(29, 84, 100);
+    --cardhvrshd:rgb(32, 126, 130);
+    --cardshd: rgb(8, 56, 54);
+    --fntcolr:rgb(24, 18, 43);
+    --fntcolr:rgb(29, 22, 22);
+    --fnthvr: rgb(251, 251, 251);
+    --colr1:rgb(64, 223, 239);
+    --colr2:rgb(149, 189, 255);
+    --colr3:rgb(167, 255, 228);
+
+    font-family: 'varela round';
+
+}
+body{
+    background-color: rgb(211, 222, 220);
+    z-index: 1;
+    scroll-behavior: smooth;
+}
+button{
+    display: none;
+}
+
+.navbar{
+    position: sticky;
+    margin: 0 32px;
+    float: right;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(95, 108, 175);
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 3;
+    display: flex;
+    gap: 5px;
+    align-items: baseline;
+
+        right: 20px;
+    top: 50px;
+
+    
+}
+.tgl{
+    color:orange;
+    padding: 1px 2px 0 2px;
+
+
+}
+ .navbar .fa:nth-child(2){
+    display: none;
+    padding: 1px 2px 0 3px;
+
+} 
+
+.drop{
+    display: flex;
+    margin: 32px;
+    padding: 10px;
+    width: 430px;
+    margin: 32px auto;
+
+}
+#field,#inp{
+    margin-right: 5px  ;
+    padding: 5px 2px;
+    color:white;
+    background-color: rgb(95, 108, 175);
+
+
+}
+button{
+    padding:  5px;
+    box-shadow: 0px 4px var(--cardhvrshd);
+   
+
+    background-color: rgb(127, 188, 210);
+}
+button:hover{
+    box-shadow: 0px 4px rgb(127, 188, 210);
+    background-color: rgb(205, 240, 234);
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+#field,#inp,button{
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+
+
+
+}
+.container{
+    padding: 25px 0;
+    width: 95%;
+    min-height: fit-content;
+    max-height:1000px;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: auto;
+    row-gap: 25px;
+}
+
+.container>div{
+    min-height: 450px;
+    max-height: 700px;
+    width: 32%;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+
+    }
+
+
+
+.users{
+    background-color: var(--cardbg);
+    box-shadow: 5px 5px var(--cardshd);
+    color: var(--fntcolr);
+    z-index: 1;
+
+}
+.info{
+     background-color: var(--cardbg);
+    box-shadow: 5px 5px var(--cardshd);
+    color: var(--fntcolr);
+}
+.dia{z-index: 2;
+    color: red;
+    background-color: black;
+}
+.container>.users:hover{
+    box-shadow: 5px 5px  var(--cardshdw);
+
+    background-color: var(--cardhvr);
+    color: var(--fnthvr);
+    transition: 0.7s;
+
+
+
+}
+
+.dark{
+  
+    background-color: rgb(52, 28, 79);
+    box-shadow:5px 5px rgb(120, 28, 104);
+    color: var(--cardshdw);
+    color: hsl(52, 100%, 62%);
+}
+.dark:hover{
+    box-shadow: 5px 5px  var(--colr3);
+    background-color: rgb(255, 161, 207);
+
+    color: rgb(2, 6, 35);
+
+    transition: 0.7s;
+
+}
+
+.arrange{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.caps{
+    text-transform: capitalize;
+}
+img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--cardshdw);
+    box-shadow: 0 0 10px var(--cardshdw);
+    background-color: rgb(255, 246, 218);
+}
+img:hover{
+animation: rot 6s ;
+
+}
+.info{
+    display:none;
+    width: 70%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+
+}
+@keyframes rot{
+0%{
+    transform: rotate(1turn);
+}
+}
+h5{
+    padding: 7px 0;
+    font-weight: 100;
+}
+
+
+.cls{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 80%;
+    position: fixed;
+    z-index: 1000;
+    top: 50%;         
+  left: 50%;       
+  transform: translate(-50%,-50%);
+  visibility: hidden;
+   background-color: var(--cardbg);
+    box-shadow: 5px 5px var(--cardshd);
+    color: var(--fntcolr);
+     scrollbar-width: none;        
+    -ms-overflow-style: none;     
+  
+}
+.cls::-webkit-scrollbar {
+    display: none;                
+}
+.cls:hover{
+    box-shadow: 5px 5px  var(--cardshdw);
+
+    background-color: var(--cardhvr);
+    color: var(--fnthvr);
+    transition: 0.7s;
+}
+.close{
+    float : right;
+}
+
+.open {
+ 
+  transform: translate(-50%, -50%) scaleX(1);
+}
+
+.cls.closing {
+  transform: translate(-50%, 50%) scaleX(0.1); 
+  opacity: 0;
+}
+
+.details{
+    background-color: var(--cardbg);
+    color: var(--fntcolr);
+    z-index: 2;
+    width: 100%;
+
+}
+.detailDark{
+       background-color: rgb(52, 28, 79);
+    color: var(--cardshdw);
+    color: hsl(52, 100%, 62%);
+}
+.clsDark{
+       background-color: rgb(52, 28, 79);
+    box-shadow:5px 5px rgb(120, 28, 104);
+    color: var(--cardshdw);
+    color: hsl(52, 100%, 62%);
+}
+
+.clsDark:hover{
+        box-shadow: 5px 5px  var(--colr3);
+    background-color: rgb(255, 161, 207);
+
+color: rgb(2, 6, 35);
+
+transition: 0.7s;
+}
+
+.details:hover{
+
+    background-color: var(--cardhvr);
+    color: var(--fnthvr);
+    transition: 2s;
+
+}
+.detailDark:hover{
+    background-color: rgb(255, 161, 207);
+
+color: rgb(2, 6, 35);
+
+transition: 0.7s;
+
+}
+.side{
+    height: 100vh;
+    width: 50%;
+     background-color: var(--cardbg);
+    box-shadow: 5px 5px var(--cardshd);
+    color: var(--fntcolr);
+        position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+      transform: translate(100%, 0%) ;
+      transition: 2s;
+      overflow-y: auto;
+       background-color:rgb(255, 99, 99);
+       color:#010A43 ;
+    scrollbar-width: none;         
+    -ms-overflow-style: none;      
+       
+
+}
+.side::-webkit-scrollbar {
+    display: none;               
+}
+
+.sideopen{
+        transform: translate(0%, 0%) ;
+        transition: 2s;
+
+}
+
+.bdcards{
+    width: 90%;
+    height: 100px;
+    text-align: center;
+    margin: 30px;
+    background-color:rgb(255, 235, 161);
+    box-shadow: 5px 5px #010A43; 
+    padding: 20px;
+    border-radius: 5px;
+        
+
+}
+.bdpara{
+    text-align: center;
+    margin: 30px;
+
+}
+
+.bday{
+    color: rgb(250, 249, 238);
+    padding: 2px 3px;
+    border-radius: 3px;
+    background-color: rgb(95, 108, 175);
+    
+}
+
+@media (max-width:1024px){
+  
+    .container>div{
+        width: 33%;
+    }
+}
+@media (max-width:1000px){
+ 
+  
+    .container>div{
+        width: 48%;
+        min-height: 450px;
+    }
+}
+
+@media (max-width:750px){
+
+    .container>div{
+        width: 100%;
+    }
+    .side{
+        width: 70%;
+    }
+
+}
+
+
